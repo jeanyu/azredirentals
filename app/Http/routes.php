@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+
+Route::get('test',['as'=>'admin.page.index','uses'=>'Admin\PageController@index']);
