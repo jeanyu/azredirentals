@@ -18,4 +18,16 @@ Route::get('/', function () {
 
 
 
-Route::get('test',['as'=>'admin.page.index','uses'=>'Admin\PageController@index']);
+Route::get('admin',['as'=>'admin.page.index','uses'=>'Admin\PageController@index']);
+
+/* Users */
+Route::get('user',['as'=>'admin.page.user','uses'=>'Admin\UserController@index']);
+Route::get('add-user',['as'=>'admin.page.createUser','uses'=>'Admin\UserController@create']);
+
+/* Members */
+Route::get('member',['as'=>'admin.page.member','uses'=>'Admin\MemberController@index']);
+Route::get('add-member',['as'=>'admin.page.createMember','uses'=>'Admin\MemberController@create']);
+
+/* Listing */
+Route::get('listing',['as'=>'admin.page.listing','uses'=>'Admin\ListingController@index']);
+Route::get('add-listing',['as'=>'admin.page.createListing','uses'=>'Admin\ListingController@create']);
