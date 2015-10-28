@@ -39,6 +39,8 @@ class MemberController extends Controller
     public function store(Request $request)
     {
         //
+
+        echo $request->get('first_name');
     }
 
     /**

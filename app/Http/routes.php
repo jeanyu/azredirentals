@@ -27,6 +27,7 @@ Route::get('add-user',['as'=>'admin.page.createUser','uses'=>'Admin\UserControll
 /* Members */
 Route::get('member',['as'=>'admin.page.member','uses'=>'Admin\MemberController@index']);
 Route::get('add-member',['as'=>'admin.page.createMember','uses'=>'Admin\MemberController@create']);
+Route::post('member',['as'=>'admin.member.store','uses'=>'Admin\MemberController@store']);
 
 /* Listing */
 Route::get('listing',['as'=>'admin.page.listing','uses'=>'Admin\ListingController@index']);
