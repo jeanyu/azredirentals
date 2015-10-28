@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Member;
+use App\Landlord;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateLandlordRequest;
 use Illuminate\Http\Request;
 
 
@@ -17,8 +18,7 @@ class MemberController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.page.member');
+        return view('admin.page.landlord');
     }
 
     /**
@@ -28,8 +28,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-         //
-        return view('admin.page.createMember');
+        return view('admin.page.createLandlord');
     }
 
     /**
@@ -38,17 +37,21 @@ class MemberController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateLandlordRequest $request)
     {
-<<<<<<< HEAD
-        Member::create($request->all());
+        /** save data from Landlord form to database **/
+        $model = new Landlord();
 
-        return redirect('member');
-=======
-        //
+        $model->first_name = $request->get('first_name');
+        $model->last_name = $request->get('last_name');
+        $model->company = $request->get('company');
+        $model->phone = $request->get('phone');
+        $model->email = $request->get('email_address');
+        $model->password = $request->get('password');
 
-        echo $request->get('first_name');
->>>>>>> origin/master
+        $model->save();
+        return redirect('landlord');
+
     }
 
     /**
@@ -59,10 +62,8 @@ class MemberController extends Controller
      */
     public function show($id)
     {
-        //
-
-        $member = Member::findOrFail($id);
-        return view('admin.page.show', compact('member'));
+        $member = Landlord::findOrFail($id);
+        return view('admin.page.show', compact('landlord'));
     }
 
     /**

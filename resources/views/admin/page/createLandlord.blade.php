@@ -2,15 +2,12 @@
 
 @section('content')
 
-
-
         <div id="page-wrapper">
 
             <div class="tabbable">
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#landlord" data-toggle="tab">Landlord</a></li>
                 <li><a href="#renter" data-toggle="tab">Renter</a></li>
-         
               </ul>
               <div class="tab-content">
                 <div id="landlord" class="tab-pane active">
@@ -31,7 +28,7 @@
                                     <div class="row">
                                         <div class="col-lg-12">
 
-                                            {!! Form::open(['url'=>route('admin.member.store'),'method'=>'POST']) !!}
+                                            {!! Form::open(['url'=>route('admin.landlord.store'),'method'=>'POST']) !!}
 
                                                 {!! Form::hidden('user_id', 1) !!}
                                                 <div class="form-group">
@@ -220,8 +217,6 @@
               </div><!-- /.tab-content -->
             </div><!-- /.tabbable -->
 
-
-            
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class CreateMemberRequest extends Request
+class CreateLandlordRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,8 @@ class CreateMemberRequest extends Request
      */
     public function authorize()
     {
-        return false;
+       // return false;
+        return true;
     }
 
     /**

@@ -303,13 +303,13 @@
                                 <!-- /.nav-second-level -->
                             </li>
                             <li>
-                                <a href="#"><i class="fa fa-table fa-fw"></i> Members<span class="fa arrow"></span></a>
+                                <a href="#"><i class="fa fa-table fa-fw"></i> Landlords<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="/member">All Members</a>
+                                        <a href="/landlord">All Landlords</a>
                                     </li>
                                     <li>
-                                        <a href="/member/add-member">Add Member</a>
+                                        <a href="/add-landlord">Add Landlord</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
