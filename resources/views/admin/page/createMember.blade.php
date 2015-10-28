@@ -134,8 +134,39 @@
 
                                                 <div class="form-group">
 
-                                                    {!! Form::label('company', 'Company:') !!}
-                                                    {!! Form::select('company', array('ABC Apartments' => 'ABC Apartments', 'ABC Management Srvc' => 'ABC Management Srvc'), null, array('class' => 'form-control')) !!}
+                                                    {!! Form::label('services-in-city', 'Services in City:') !!}
+                                                    {!! Form::select('services-in-city', array('Tucson' => 'Tucson', 'Phoenix' => 'Phoenix'), null, array('class' => 'form-control')) !!}
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    {!! Form::label('preferred-bedroom', 'Preferred Bedroom:') !!}
+                                                    {!! Form::select('preferred-bedroom', array('Studio 1' => 'Studio 1', '1-2' => '1-2', '2-3' => '2-3', '3+' => '3+', '4+' => '4+'), null, array('class' => 'form-control')) !!}
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    {!! Form::label('current_address', 'Current Address:') !!}
+                                                    {!! Form::text('current_address', null, ['class'=>'form-control']) !!}
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    {!! Form::label('city', 'City:') !!}
+                                                    {!! Form::text('city', null, ['class'=>'form-control']) !!}
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    {!! Form::label('state', 'State:') !!}
+                                                    {!! Form::select('state', array('state' => 'state'), null, array('class' => 'form-control')) !!}
+                                                </div>
+
+
+                                                <div class="form-group">
+
+                                                    {!! Form::label('zip-code', 'Zip Code:') !!}
+                                                    {!! Form::text('zip-code', null, ['class'=>'form-control']) !!}
                                                 </div>
 
                                                 <div class="form-group">

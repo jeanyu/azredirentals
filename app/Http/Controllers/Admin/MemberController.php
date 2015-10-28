@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use App\Member;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
 
 class MemberController extends Controller
 {
@@ -38,7 +40,9 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Member::create($request->all());
+
+        return redirect('member');
     }
 
     /**
@@ -50,6 +54,9 @@ class MemberController extends Controller
     public function show($id)
     {
         //
+
+        $member = Member::findOrFail($id);
+        return view('admin.page.show', compact('member'));
     }
 
     /**
@@ -85,4 +92,6 @@ class MemberController extends Controller
     {
         //
     }
+
+
 }

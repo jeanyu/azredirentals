@@ -309,7 +309,7 @@
                                         <a href="/member">All Members</a>
                                     </li>
                                     <li>
-                                        <a href="/add-member">Add Member</a>
+                                        <a href="/member/add-member">Add Member</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->

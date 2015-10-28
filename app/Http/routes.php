@@ -16,17 +16,19 @@ Route::get('/', function () {
 });
 
 
-
-
 Route::get('admin',['as'=>'admin.page.index','uses'=>'Admin\PageController@index']);
 
 /* Users */
 Route::get('user',['as'=>'admin.page.user','uses'=>'Admin\UserController@index']);
-Route::get('add-user',['as'=>'admin.page.createUser','uses'=>'Admin\UserController@create']);
+Route::get('user/add-user',['as'=>'admin.page.createUser','uses'=>'Admin\UserController@create']);
 
 /* Members */
-Route::get('member',['as'=>'admin.page.member','uses'=>'Admin\MemberController@index']);
-Route::get('add-member',['as'=>'admin.page.createMember','uses'=>'Admin\MemberController@create']);
+
+
+Route::get('member','Admin\MemberController@index');
+Route::get('member/add-member','Admin\MemberController@create');
+Route::get('member/{id}','Admin\MemberController@show');
+Route::post('member','Admin\MemberController@store');
 
 /* Listing */
 Route::get('listing',['as'=>'admin.page.listing','uses'=>'Admin\ListingController@index']);
