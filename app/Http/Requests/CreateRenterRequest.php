@@ -25,7 +25,19 @@ class CreateRenterRequest extends Request
     public function rules()
     {
         return [
-            //
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'services_in_city' => 'required',
+            'preferred_bedroom' => 'required',
+            'current_address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'zip_code' => 'required',
+            'phone' => 'required',
+            'email_address' => 'required',
+            'confirm_email_address' => 'required',
+            'password' => 'required',
+            'published_at' => 'required'
         ];
     }
 }

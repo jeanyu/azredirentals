@@ -25,7 +25,16 @@ class CreateLandlordRequest extends Request
     public function rules()
     {
         return [
-            //
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'company' => 'required',
+            'phone' => 'required',
+            'email_address' => 'required',
+            'confirm_email_address' => 'required',
+            'password' => 'required',
+            'published_at' => 'required'
         ];
     }
+
+
 }
