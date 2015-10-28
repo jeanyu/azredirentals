@@ -315,6 +315,18 @@
                                 <!-- /.nav-second-level -->
                             </li>
                             <li>
+                                <a href="#"><i class="fa fa-table fa-fw"></i> Renters<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="/renter">All Renters</a>
+                                    </li>
+                                    <li>
+                                        <a href="/add-renter">Add Renter</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
                                 <a href="#"><i class="fa fa-table fa-fw"></i> Listings<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
