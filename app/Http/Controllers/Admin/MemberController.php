@@ -40,9 +40,15 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         Member::create($request->all());
 
         return redirect('member');
+=======
+        //
+
+        echo $request->get('first_name');
+>>>>>>> origin/master
     }
 
     /**
