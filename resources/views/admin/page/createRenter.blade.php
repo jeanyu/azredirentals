@@ -82,14 +82,14 @@
 
                                     <div class="form-group">
 
-                                        {!! Form::label('email_address', 'Email Address:') !!}
-                                        {!! Form::email('email_address', null, ['class'=>'form-control']) !!}
+                                        {!! Form::label('email', 'Email Address:') !!}
+                                        {!! Form::email('email', null, ['class'=>'form-control']) !!}
                                     </div>
 
                                     <div class="form-group">
 
-                                        {!! Form::label('confirm_email_address', 'Confirm Email Address:') !!}
-                                        {!! Form::email('confirm_email_address', null, ['class'=>'form-control']) !!}
+                                        {!! Form::label('email_confirmation', 'Confirm Email Address:') !!}
+                                        {!! Form::email('email_confirmation', null, ['class'=>'form-control']) !!}
                                     </div>
 
                                     <div class="form-group">

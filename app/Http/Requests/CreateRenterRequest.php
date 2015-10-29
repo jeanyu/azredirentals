@@ -34,10 +34,9 @@ class CreateRenterRequest extends Request
             'state' => 'required',
             'zip_code' => 'required',
             'phone' => 'required',
-            'email_address' => 'required',
-            'confirm_email_address' => 'required',
-            'password' => 'required',
-            'published_at' => 'required'
+            'email' => 'required',
+            'email_confirmation' => 'required|same:email',
+            'password' => 'required'
         ];
     }
 }

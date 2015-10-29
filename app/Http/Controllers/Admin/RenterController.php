@@ -17,7 +17,8 @@ class RenterController extends Controller
      */
     public function index()
     {
-        return view('admin.page.renter');
+        $renters = Renter::all();
+        return view('admin.page.renter', compact('renters'));
     }
 
     /**
@@ -52,7 +53,7 @@ class RenterController extends Controller
         $model->state = $request->get('state');
         $model->zip_code = $request->get('zip_code');
         $model->phone = $request->get('phone');
-        $model->email = $request->get('email_address');
+        $model->email = $request->get('email');
         $model->password = $request->get('password');
 
         $model->save();

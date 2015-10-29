@@ -23,9 +23,9 @@ Route::get('user',['as'=>'admin.page.user','uses'=>'Admin\UserController@index']
 Route::get('user/add-user',['as'=>'admin.page.createUser','uses'=>'Admin\UserController@create']);
 
 /* Landlords */
-Route::get('landlord',['as'=>'admin.page.landlord','uses'=>'Admin\MemberController@index']);
-Route::get('add-landlord',['as'=>'admin.page.createLandlord','uses'=>'Admin\MemberController@create']);
-Route::post('landlord',['as'=>'admin.landlord.store','uses'=>'Admin\MemberController@store']);
+Route::get('landlord',['as'=>'admin.page.landlord','uses'=>'Admin\LandlordController@index']);
+Route::get('add-landlord',['as'=>'admin.page.createLandlord','uses'=>'Admin\LandlordController@create']);
+Route::post('landlord',['as'=>'admin.landlord.store','uses'=>'Admin\LandlordController@store']);
 
 /* Renters */
 Route::get('renter',['as'=>'admin.page.renter','uses'=>'Admin\RenterController@index']);

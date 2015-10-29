@@ -8,8 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateLandlordRequest;
 use Illuminate\Http\Request;
 
-
-class MemberController extends Controller
+class LandlordController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +17,10 @@ class MemberController extends Controller
      */
     public function index()
     {
-        return view('admin.page.landlord');
+
+        $landlords = Landlord::all();
+
+        return view('admin.page.landlord', compact('landlords'));
     }
 
     /**
@@ -46,12 +48,11 @@ class MemberController extends Controller
         $model->last_name = $request->get('last_name');
         $model->company = $request->get('company');
         $model->phone = $request->get('phone');
-        $model->email = $request->get('email_address');
+        $model->email = $request->get('email');
         $model->password = $request->get('password');
 
         $model->save();
         return redirect('landlord');
-
     }
 
     /**
@@ -99,6 +100,4 @@ class MemberController extends Controller
     {
         //
     }
-
-
 }

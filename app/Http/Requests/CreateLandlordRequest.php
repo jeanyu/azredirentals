@@ -29,10 +29,10 @@ class CreateLandlordRequest extends Request
             'last_name' => 'required',
             'company' => 'required',
             'phone' => 'required',
-            'email_address' => 'required',
-            'confirm_email_address' => 'required',
-            'password' => 'required',
-            'published_at' => 'required'
+            'email' => 'required|email',
+            'email_confirmation' => 'required|same:email',
+            'password' => 'required'
+
         ];
     }
 
