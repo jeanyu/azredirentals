@@ -18,7 +18,7 @@ class RenterController extends Controller
     public function index()
     {
         $renters = Renter::all();
-        return view('admin.page.renter', compact('renters'));
+        return view('admin.renter.index', compact('renters'));
     }
 
     /**
@@ -28,7 +28,7 @@ class RenterController extends Controller
      */
     public function create()
     {
-        return view('admin.page.createRenter');
+        return view('admin.renter.create');
     }
 
     /**
@@ -80,7 +80,8 @@ class RenterController extends Controller
      */
     public function edit($id)
     {
-        //
+        $renter  = Renter::find($id);
+        return view('admin.renter.edit',compact('renter'));
     }
 
     /**
