@@ -68,7 +68,7 @@ class RenterController extends Controller
      */
     public function show($id)
     {
-        $member = Renter::findOrFail($id);
+        $renter = Renter::findOrFail($id);
         return view('admin.page.show', compact('renter'));
     }
 
@@ -80,7 +80,8 @@ class RenterController extends Controller
      */
     public function edit($id)
     {
-        //
+        $renter = Renter::findOrFail($id);
+        return view('admin.page.editRenter', compact('renter'));
     }
 
     /**
@@ -92,7 +93,9 @@ class RenterController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $renter = Renter::findOrFail($id);
+        $renter->update($request->all());
+        return redirect('renter');
     }
 
     /**

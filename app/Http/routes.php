@@ -30,7 +30,12 @@ Route::post('landlord',['as'=>'admin.landlord.store','uses'=>'Admin\LandlordCont
 /* Renters */
 Route::get('renter',['as'=>'admin.page.renter','uses'=>'Admin\RenterController@index']);
 Route::get('add-renter',['as'=>'admin.page.createRenter','uses'=>'Admin\RenterController@create']);
+Route::get('renter/{id}', 'Admin\RenterController@show');
 Route::post('renter',['as'=>'admin.renter.store','uses'=>'Admin\RenterController@store']);
+Route::get('renter/{id}/edit', 'Admin\RenterController@edit');
+
+
+
 
 /* Listing */
 Route::get('listing',['as'=>'admin.page.listing','uses'=>'Admin\ListingController@index']);

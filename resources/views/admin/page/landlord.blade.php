@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
@@ -43,10 +41,7 @@
                                         <td>{{ $landlord->email }}</td>
                                     </tr>
 
-
-
                                 @endforeach
-
 
                                 </tbody>
                             </table>
@@ -61,10 +56,7 @@
             <!-- /.col-lg-12 -->
         </div>
 
-
     </div>
     <!-- /#page-wrapper -->
-
-
 
 @stop

@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
@@ -36,17 +34,15 @@
                                 @foreach ($renters as $renter)
 
                                     <tr class="odd gradeX">
-                                        <td>{{ $renter->first_name }}</td>
+                                        <td><a href="{{ url('/renter', $renter->id) }}">{{ $renter->first_name }}</a></td>
                                         <td>{{ $renter->last_name }}</td>
                                         <td>{{ $renter->services_in_city }}</td>
                                         <td>{{ $renter->current_address }}</td>
                                         <td>{{ $renter->email }}</td>
                                     </tr>
 
-
-
                                 @endforeach
-                                
+
                                 </tbody>
                             </table>
                         </div>
@@ -60,10 +56,7 @@
             <!-- /.col-lg-12 -->
         </div>
 
-
     </div>
     <!-- /#page-wrapper -->
-
-
 
 @stop
