@@ -80,13 +80,9 @@ class RenterController extends Controller
      */
     public function edit($id)
     {
-<<<<<<< HEAD
-        $renter = Renter::findOrFail($id);
-        return view('admin.page.editRenter', compact('renter'));
-=======
+
         $renter  = Renter::find($id);
         return view('admin.renter.edit',compact('renter'));
->>>>>>> origin/master
     }
 
     /**
