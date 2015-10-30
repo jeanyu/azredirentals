@@ -13,4 +13,6 @@ class Renter extends Model
     ];
 
     protected $table = 'renters';
+
+
 }

@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateLandlordRequest;
 use Illuminate\Http\Request;
+use PhpSpec\Runner\Maintainer\LetAndLetgoMaintainer;
 
 class LandlordController extends Controller
 {
@@ -20,7 +21,7 @@ class LandlordController extends Controller
 
         $landlords = Landlord::all();
 
-        return view('admin.page.landlord', compact('landlords'));
+        return view('admin.landlord.index', compact('landlords'));
     }
 
     /**
@@ -30,7 +31,7 @@ class LandlordController extends Controller
      */
     public function create()
     {
-        return view('admin.page.createLandlord');
+        return view('admin.landlord.create');
     }
 
     /**
@@ -63,7 +64,7 @@ class LandlordController extends Controller
      */
     public function show($id)
     {
-        $member = Landlord::findOrFail($id);
+        $landlord = Landlord::findOrFail($id);
         return view('admin.page.show', compact('landlord'));
     }
 
@@ -75,7 +76,8 @@ class LandlordController extends Controller
      */
     public function edit($id)
     {
-        //
+        $landlord  = Landlord::findOrFail($id);
+        return view('admin.landlord.edit',compact('landlord'));
     }
 
     /**
@@ -85,9 +87,25 @@ class LandlordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreateLandlordRequest $request, $id)
     {
-        //
+        $landlord = Landlord::findOrFail($id);
+        $landlord->first_name = $request->get('first_name');
+        $landlord->last_name = $request->get('last_name');
+        $landlord->company = $request->get('company');
+        $landlord->phone = $request->get('phone');
+        $landlord->email = $request->get('email');
+
+
+        if($request->get('password') != ''){
+            $landlord->password = $request->get('password');
+        }
+
+
+        $landlord->save();
+
+
+        return redirect('landlord');
     }
 
     /**

@@ -34,11 +34,9 @@
                                 @foreach ($renters as $renter)
 
                                     <tr class="odd gradeX">
-<<<<<<< HEAD:resources/views/admin/page/renter.blade.php
-                                        <td><a href="{{ url('/renter', $renter->id) }}">{{ $renter->first_name }}</a></td>
-=======
+
                                         <td><a href="{{route('admin.renter.edit',$renter->id)}}">{{ $renter->first_name }}</a></td>
->>>>>>> origin/master:resources/views/admin/renter/index.blade.php
+
                                         <td>{{ $renter->last_name }}</td>
                                         <td>{{ $renter->services_in_city }}</td>
                                         <td>{{ $renter->current_address }}</td>

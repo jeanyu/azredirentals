@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Renter;
 use App\Http\Requests;
+use App\Http\Requests\RenterRequest;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CreateRenterRequest;
 use Illuminate\Http\Request;
 
 class RenterController extends Controller
@@ -37,7 +37,7 @@ class RenterController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateRenterRequest $request)
+    public function store(RenterRequest $request)
     {
         //
 
@@ -81,7 +81,7 @@ class RenterController extends Controller
     public function edit($id)
     {
 
-        $renter  = Renter::find($id);
+        $renter  = Renter::findOrFail($id);
         return view('admin.renter.edit',compact('renter'));
     }
 
@@ -92,10 +92,29 @@ class RenterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RenterRequest $request, $id)
     {
+
         $renter = Renter::findOrFail($id);
-        $renter->update($request->all());
+        $renter->first_name = $request->get('first_name');
+        $renter->last_name = $request->get('last_name');
+        $renter->services_in_city = $request->get('services_in_city');
+        $renter->preferred_bedroom = $request->get('preferred_bedroom');
+        $renter->current_address = $request->get('current_address');
+        $renter->city = $request->get('city');
+        $renter->state = $request->get('state');
+        $renter->zip_code = $request->get('zip_code');
+        $renter->phone = $request->get('phone');
+        $renter->email = $request->get('email');
+
+        if($request->get('password') != ''){
+            $renter->password = $request->get('password');
+        }
+
+
+        $renter->save();
+
+
         return redirect('renter');
     }
 

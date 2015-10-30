@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class CreateRenterRequest extends Request
+class UpdateRenterRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,8 +13,7 @@ class CreateRenterRequest extends Request
      */
     public function authorize()
     {
-        // return false;
-        return true;
+        return false;
     }
 
     /**
@@ -35,8 +34,8 @@ class CreateRenterRequest extends Request
             'zip_code' => 'required',
             'phone' => 'required',
             'email' => 'required',
-            'email_confirmation' => 'required|same:email',
-            'password' => 'required'
+            'email_confirmation' => 'sometimes|required|same:email',
+            'password' => 'sometimes|required'
         ];
     }
 }

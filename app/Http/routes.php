@@ -23,16 +23,18 @@ Route::get('user',['as'=>'admin.page.user','uses'=>'Admin\UserController@index']
 Route::get('user/add-user',['as'=>'admin.page.createUser','uses'=>'Admin\UserController@create']);
 
 /* Landlords */
-Route::get('landlord',['as'=>'admin.page.landlord','uses'=>'Admin\LandlordController@index']);
-Route::get('add-landlord',['as'=>'admin.page.createLandlord','uses'=>'Admin\LandlordController@create']);
+Route::get('landlord',['as'=>'admin.landlord.index','uses'=>'Admin\LandlordController@index']);
+Route::get('add-landlord',['as'=>'admin.landlord.create','uses'=>'Admin\LandlordController@create']);
 Route::post('landlord',['as'=>'admin.landlord.store','uses'=>'Admin\LandlordController@store']);
+Route::put('landlord/{id}',['as'=>'admin.landlord.update','uses'=>'Admin\LandlordController@update']);
+Route::get('landlord/edit/{id}',['as'=>'admin.landlord.edit','uses'=>'Admin\LandlordController@edit']);
 
 /* Renters */
 Route::get('renter',['as'=>'admin.renter.index','uses'=>'Admin\RenterController@index']);
-Route::get('renter/edit/{id}',['as'=>'admin.renter.edit','uses'=>'Admin\RenterController@edit']);
 Route::get('add-renter',['as'=>'admin.renter.create','uses'=>'Admin\RenterController@create']);
 Route::post('renter',['as'=>'admin.renter.store','uses'=>'Admin\RenterController@store']);
 Route::put('renter/{id}',['as'=>'admin.renter.update','uses'=>'Admin\RenterController@update']);
+Route::get('renter/edit/{id}',['as'=>'admin.renter.edit','uses'=>'Admin\RenterController@edit']);
 
 
 /* Listing */

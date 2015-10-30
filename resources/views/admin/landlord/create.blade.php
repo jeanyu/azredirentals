@@ -7,7 +7,7 @@
         <div id="renter" class="tab-pane">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Edit Renter</h1>
+                    <h1 class="page-header">Add Landlord</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -22,11 +22,9 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                     {!! Form::model($renter,['route'=>["admin.renter.update",$renter->id],'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
+                                    {!! Form::open(['url'=>route('admin.landlord.store'),'method'=>'POST']) !!}
 
-
-                                     @include('admin.renter.form')
-
+                                    @include('admin.landlord.form')
 
                                     {!! Form::close() !!}
 

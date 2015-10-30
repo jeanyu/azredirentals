@@ -7,7 +7,7 @@
         <div id="renter" class="tab-pane">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Edit Renter</h1>
+                    <h1 class="page-header">Edit Landlord</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -22,15 +22,16 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                     {!! Form::model($renter,['route'=>["admin.renter.update",$renter->id],'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
+
+                                    {!! Form::model($landlord,['route'=>["admin.landlord.update",$landlord->id],'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
 
 
-                                     @include('admin.renter.form')
+                                    @include('admin.landlord.form')
 
 
                                     {!! Form::close() !!}
 
-                                    <!-- show errors -->
+                                            <!-- show errors -->
                                     @if ($errors->any())
                                         <ul class="alert alert-danger">
                                             @foreach($errors->all() as $error)
