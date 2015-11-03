@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Landlord;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CreateLandlordRequest;
+use App\Http\Requests\LandlordRequest;
 use Illuminate\Http\Request;
-use PhpSpec\Runner\Maintainer\LetAndLetgoMaintainer;
+
 
 class LandlordController extends Controller
 {
@@ -40,7 +40,7 @@ class LandlordController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateLandlordRequest $request)
+    public function store(LandlordRequest $request)
     {
         /** save data from Landlord form to database **/
         $model = new Landlord();
@@ -87,7 +87,7 @@ class LandlordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CreateLandlordRequest $request, $id)
+    public function update(LandlordRequest $request, $id)
     {
         $landlord = Landlord::findOrFail($id);
         $landlord->first_name = $request->get('first_name');
