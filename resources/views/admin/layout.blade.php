@@ -302,6 +302,42 @@
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
+
+                            <li>
+                                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Member Manager<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">Landlords <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="/landlord">All Landlords</a>
+                                            </li>
+                                            <li>
+                                                <a href="/add-landlord">Add Landlord</a>
+                                            </li>
+                                        </ul>
+                                        <!-- /.nav-third-level -->
+                                    </li>
+                                    <li>
+                                        <a href="#">Renters <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="/renter">All Renters</a>
+                                            </li>
+                                            <li>
+                                                <a href="/add-renter">Add Renter</a>
+                                            </li>
+                                        </ul>
+                                        <!-- /.nav-third-level -->
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+
+
+
+                            <!--
                             <li>
                                 <a href="#"><i class="fa fa-table fa-fw"></i> Landlords<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
@@ -312,7 +348,7 @@
                                         <a href="/add-landlord">Add Landlord</a>
                                     </li>
                                 </ul>
-                                <!-- /.nav-second-level -->
+
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-table fa-fw"></i> Renters<span class="fa arrow"></span></a>
@@ -324,8 +360,8 @@
                                         <a href="/add-renter">Add Renter</a>
                                     </li>
                                 </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
+
+                            </li> -->
                             <li>
                                 <a href="#"><i class="fa fa-table fa-fw"></i> Listings<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
@@ -385,7 +421,7 @@
                                                 <a href="#">Third Level Item</a>
                                             </li>
                                             <li>
-                                                <a href="#">Third Level Item</a>
+                                                <a href="/add-renter">Add Renter</a>
                                             </li>
                                             <li>
                                                 <a href="#">Third Level Item</a>
