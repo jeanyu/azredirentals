@@ -19,8 +19,11 @@ Route::get('/', function () {
 Route::get('admin',['as'=>'admin.page.index','uses'=>'Admin\PageController@index']);
 
 /* Users */
-Route::get('user',['as'=>'admin.page.user','uses'=>'Admin\UserController@index']);
-Route::get('user/add-user',['as'=>'admin.page.createUser','uses'=>'Admin\UserController@create']);
+Route::get('user',['as'=>'admin.user.index','uses'=>'Admin\UserController@index']);
+Route::get('add-user',['as'=>'admin.user.create','uses'=>'Admin\UserController@create']);
+Route::post('user',['as'=>'admin.user.store','uses'=>'Admin\UserController@store']);
+Route::put('user/{id}',['as'=>'admin.user.update','uses'=>'Admin\UserController@update']);
+Route::get('user/edit/{id}',['as'=>'admin.user.edit','uses'=>'Admin\UserController@edit']);
 
 /* Landlords */
 Route::get('landlord',['as'=>'admin.landlord.index','uses'=>'Admin\LandlordController@index']);

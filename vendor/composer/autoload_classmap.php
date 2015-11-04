@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'CreateLandlordsTable' => $baseDir . '/database/migrations/2015_10_28_032915_create_landlords_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateRentersTable' => $baseDir . '/database/migrations/2015_10_28_054546_create_renters_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
