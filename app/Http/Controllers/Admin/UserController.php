@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 
 
@@ -53,6 +54,7 @@ class UserController extends Controller
         $model->email = $request->get('email');
         $model->password = $request->get('password');
 
+
         $model->save();
         return redirect('user');
     }
@@ -98,10 +100,9 @@ class UserController extends Controller
         $user->username = $request->get('username');
         $user->type = $request->get('type');
         $user->status = $request->get('status');
+        $user->password = $request->get('password');
 
 
-            $user->password = $request->get('password');
-        
 
         $user->save();
         return redirect('user');

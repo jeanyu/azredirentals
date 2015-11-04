@@ -53,6 +53,7 @@ class RenterController extends Controller
         $model->state = $request->get('state');
         $model->zip_code = $request->get('zip_code');
         $model->phone = $request->get('phone');
+        $model->status = $request->get('status');
         $model->email = $request->get('email');
         $model->password = $request->get('password');
 
@@ -105,6 +106,7 @@ class RenterController extends Controller
         $renter->state = $request->get('state');
         $renter->zip_code = $request->get('zip_code');
         $renter->phone = $request->get('phone');
+        $renter->status = $request->get('status');
         $renter->email = $request->get('email');
 
         if($request->get('password') != ''){

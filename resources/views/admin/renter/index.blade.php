@@ -27,6 +27,7 @@
                                     <th>Services in City</th>
                                     <th>Current Address</th>
                                     <th>Email Address</th>
+                                    <th>Status</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -41,6 +42,7 @@
                                         <td>{{ $renter->services_in_city }}</td>
                                         <td>{{ $renter->current_address }}</td>
                                         <td>{{ $renter->email }}</td>
+                                        <td>{{ $renter->status }}</td>
                                     </tr>
 
                                 @endforeach

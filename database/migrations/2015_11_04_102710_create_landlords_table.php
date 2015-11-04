@@ -18,6 +18,7 @@ class CreateLandlordsTable extends Migration
             $table->string('last_name');
             $table->string('company');
             $table->string('phone');
+            $table->string('status');
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->timestamps();

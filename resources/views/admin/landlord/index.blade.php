@@ -27,6 +27,7 @@
                                     <th>Company</th>
                                     <th>Phone</th>
                                     <th>Email Address</th>
+                                    <th>Status</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -39,6 +40,7 @@
                                         <td>{{ $landlord->company }}</td>
                                         <td>{{ $landlord->phone }}</td>
                                         <td>{{ $landlord->email }}</td>
+                                        <td>{{ $landlord->status }}</td>
                                     </tr>
 
                                 @endforeach

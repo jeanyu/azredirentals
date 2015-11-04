@@ -23,6 +23,7 @@ class CreateRentersTable extends Migration
             $table->string('state');
             $table->string('zip_code');
             $table->string('phone');
+            $table->string('status');
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->timestamps();

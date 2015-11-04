@@ -49,6 +49,7 @@ class LandlordController extends Controller
         $model->last_name = $request->get('last_name');
         $model->company = $request->get('company');
         $model->phone = $request->get('phone');
+        $model->status = $request->get('status');
         $model->email = $request->get('email');
         $model->password = $request->get('password');
 
@@ -94,6 +95,7 @@ class LandlordController extends Controller
         $landlord->last_name = $request->get('last_name');
         $landlord->company = $request->get('company');
         $landlord->phone = $request->get('phone');
+        $landlord->status = $request->get('status');
         $landlord->email = $request->get('email');
 
 

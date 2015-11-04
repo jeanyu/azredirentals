@@ -25,6 +25,12 @@
 
 <div class="form-group">
 
+    {!! Form::label('status', 'Status:') !!}
+    {!! Form::select('status', array('Active' => 'Active', 'Inactive' => 'Inactive'), null, array('class' => 'form-control')) !!}
+</div>
+
+<div class="form-group">
+
     {!! Form::label('email', 'Email Address:') !!}
     {!! Form::email('email', null, ['class'=>'form-control']) !!}
 </div>
