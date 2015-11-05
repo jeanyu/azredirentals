@@ -52,7 +52,7 @@ class UserController extends Controller
         $model->type = $request->get('type');
         $model->status = $request->get('status');
         $model->email = $request->get('email');
-        $model->password = $request->get('password');
+        $model->password = bcrypt($request->get('password'));
 
 
         $model->save();
@@ -100,7 +100,7 @@ class UserController extends Controller
         $user->username = $request->get('username');
         $user->type = $request->get('type');
         $user->status = $request->get('status');
-        $user->password = $request->get('password');
+        $user->password = bcrypt($request->get('password'));
 
 
 

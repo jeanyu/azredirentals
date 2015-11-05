@@ -55,7 +55,7 @@ class RenterController extends Controller
         $model->phone = $request->get('phone');
         $model->status = $request->get('status');
         $model->email = $request->get('email');
-        $model->password = $request->get('password');
+        $model->password = bcrypt($request->get('password'));
 
         $model->save();
         return redirect('renter');
@@ -110,7 +110,7 @@ class RenterController extends Controller
         $renter->email = $request->get('email');
 
         if($request->get('password') != ''){
-            $renter->password = $request->get('password');
+            $renter->password = bcrypt($request->get('password'));
         }
 
 
