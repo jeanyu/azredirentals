@@ -28,6 +28,7 @@
                                     <th>Username</th>
                                     <th>Type</th>
                                     <th>Status</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -43,6 +44,7 @@
                                         <td>{{ $user->username }}</td>
                                         <td>{{ $user->type }}</td>
                                         <td>{{ $user->status }}</td>
+                                        <td><a href="{{route('admin.user.delete',$user->id)}}">DELETE</a></td>
                                     </tr>
 
                                 @endforeach

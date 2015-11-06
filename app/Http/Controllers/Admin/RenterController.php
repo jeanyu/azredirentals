@@ -128,6 +128,8 @@ class RenterController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $renter = Renter::findOrFail($id);
+        $renter->delete();
+        return redirect('renter');
     }
 }

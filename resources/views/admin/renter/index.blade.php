@@ -28,6 +28,7 @@
                                     <th>Current Address</th>
                                     <th>Email Address</th>
                                     <th>Status</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -43,6 +44,7 @@
                                         <td>{{ $renter->current_address }}</td>
                                         <td>{{ $renter->email }}</td>
                                         <td>{{ $renter->status }}</td>
+                                        <td><a href="{{route('admin.renter.delete',$renter->id)}}">DELETE</a></td>
                                     </tr>
 
                                 @endforeach

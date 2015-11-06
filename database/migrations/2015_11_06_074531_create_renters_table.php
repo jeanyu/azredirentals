@@ -27,6 +27,7 @@ class CreateRentersTable extends Migration
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

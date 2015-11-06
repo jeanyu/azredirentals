@@ -118,6 +118,8 @@ class LandlordController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $landlord = Landlord::findOrFail($id);
+        $landlord->delete();
+        return redirect('landlord');
     }
 }

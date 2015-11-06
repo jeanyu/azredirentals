@@ -28,6 +28,7 @@
                                     <th>Phone</th>
                                     <th>Email Address</th>
                                     <th>Status</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -41,6 +42,7 @@
                                         <td>{{ $landlord->phone }}</td>
                                         <td>{{ $landlord->email }}</td>
                                         <td>{{ $landlord->status }}</td>
+                                        <td><a href="{{route('admin.landlord.delete',$landlord->id)}}">DELETE</a></td>
                                     </tr>
 
                                 @endforeach
