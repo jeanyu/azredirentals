@@ -71,16 +71,20 @@
     {!! Form::text('garage', null, ['class'=>'form-control']) !!}
 </div>
 
-<div class="form-group">
 
+<div class="form-group">
     {!! Form::label('furnished', 'Furnished:') !!}
-    {!! Form::select('furnished', array('Yes' => 'Yes', 'No' => 'No', 'Semi Furnished' => 'Semi Furnished'), null, array('class' => 'form-control')) !!}
+    {!! Form::radio('furnished', 'Yes') !!} Yes
+    {!! Form::radio('furnished', 'No') !!} No
+    {!! Form::radio('furnished', 'Semi Furnished') !!} Semi Furnished
 </div>
+
 
 <div class="form-group">
 
     {!! Form::label('pets', 'Pets:') !!}
-    {!! Form::text('pets', null, ['class'=>'form-control']) !!}
+    {!! Form::radio('pets', 'Yes') !!} Yes
+    {!! Form::radio('pets', 'No') !!} No
 </div>
 
 <div class="form-group">

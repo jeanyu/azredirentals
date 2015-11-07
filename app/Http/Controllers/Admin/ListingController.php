@@ -27,7 +27,8 @@ class ListingController extends Controller
     public function create()
     {
          //
-        return view('admin.page.createListing');
+        //return view('admin.page.createListing');
+        return view('admin.listing.create');
     }
 
     /**
