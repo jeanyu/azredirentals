@@ -334,6 +334,19 @@
                                 <!-- /.nav-second-level -->
                             </li>
 
+                            <li>
+                                <a href="#"><i class="fa fa-table fa-fw"></i> Manage Listings<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="/listing">All Listings</a>
+                                    </li>
+                                    <li>
+                                        <a href="/add-listing">Add Listing</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+
 
 
 
