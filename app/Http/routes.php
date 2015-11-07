@@ -44,5 +44,9 @@ Route::get('renter/delete/{id}',['as'=>'admin.renter.delete','uses'=>'Admin\Rent
 
 
 /* Listing */
-Route::get('listing',['as'=>'admin.page.listing','uses'=>'Admin\ListingController@index']);
-Route::get('add-listing',['as'=>'admin.page.createListing','uses'=>'Admin\ListingController@create']);
+Route::get('listing',['as'=>'admin.listing.index','uses'=>'Admin\ListingController@index']);
+Route::get('add-listing',['as'=>'admin.listing.create','uses'=>'Admin\ListingController@create']);
+Route::post('listing',['as'=>'admin.listing.store','uses'=>'Admin\ListingController@store']);
+Route::put('listing/{id}',['as'=>'admin.listing.update','uses'=>'Admin\ListingController@update']);
+Route::get('listing/edit/{id}',['as'=>'admin.listing.edit','uses'=>'Admin\ListingController@edit']);
+Route::get('listing/delete/{id}',['as'=>'admin.listing.delete','uses'=>'Admin\ListingController@destroy']);
