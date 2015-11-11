@@ -88,6 +88,8 @@ class LandlordController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
     public function update(LandlordRequest $request, $id)
     {
         $landlord = Landlord::findOrFail($id);
@@ -97,8 +99,6 @@ class LandlordController extends Controller
         $landlord->phone = $request->get('phone');
         $landlord->status = $request->get('status');
         $landlord->email = $request->get('email');
-
-
         if($request->get('password') != ''){
             $landlord->password = bcrypt($request->get('password'));
         }

@@ -40,12 +40,12 @@ class ListingRequest extends Request
             'pets' => 'required',
             'features' => 'required',
             'schools' => 'required',
-            'photos' => 'required',
+            'photos' => 'mimes:png',
             'map' => 'required',
             'description' => 'required',
             'owner_name' => 'required',
-            'contact_number' => 'required',
-            'file' => 'required'
+            'contact_number' => 'required'
+
         ];
     }
 }

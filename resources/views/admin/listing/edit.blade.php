@@ -22,7 +22,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                     {!! Form::model($user,['route'=>["admin.listing.update",$user->id],'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
+                                     {!! Form::model($listing,['route'=>["admin.listing.update",$listing->id], 'files' => true, 'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
 
 
                                      @include('admin.listing.form')

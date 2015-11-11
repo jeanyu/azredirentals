@@ -23,12 +23,12 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Address</th>
+                                    <th>Type</th>
+                                    <th>Owner Name</th>
+                                    <th>Contact</th>
                                     <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -39,12 +39,12 @@
 
                                         <td><a href="{{route('admin.listing.edit',$listing->id)}}">{{ $listing->id }}</a></td>
 
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{ $listing->address }}</td>
+                                        <td>{{ $listing->type_of_dwelling }}</td>
+                                        <td>{{ $listing->owner_name }}</td>
+                                        <td>{{ $listing->contact_number }}</td>
+                                        <th><a href="{{route('admin.listing.delete',$listing->id)}}">Delete</a></th>
+
                                     </tr>
 
                                 @endforeach
