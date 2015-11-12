@@ -5,15 +5,13 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Listings</h1>
+                <h1 class="page-header">For Approval Listings</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
         <!-- /.row -->
         <div class="row">
             <div class="col-lg-12">
-
-
                 <div class="panel panel-default">
                     <!--<div class="panel-heading">
                         DataTables Advanced Tables
@@ -29,7 +27,7 @@
                                     <th>Type</th>
                                     <th>Owner Name</th>
                                     <th>Contact</th>
-                                    <th>Price</th>
+                                    <th>Status</th>
                                     <th></th>
 
                                 </tr>
@@ -38,7 +36,7 @@
 
                                 @foreach ($listings as $listing)
 
-                                    @if($listing->status == "Active")
+                                    @if($listing->status == "Inactive")
 
                                         <tr class="odd gradeX">
 
@@ -48,11 +46,10 @@
                                             <td>{{ $listing->type_of_dwelling }}</td>
                                             <td>{{ $listing->owner_name }}</td>
                                             <td>{{ $listing->contact_number }}</td>
-                                            <th>{{ $listing->price }}</th>
+                                            <th>{{ $listing->status }}</th>
                                             <th><a href="{{route('admin.listing.delete',$listing->id)}}">Delete</a></th>
                                         </tr>
                                     @endif
-
                                 @endforeach
 
                                 </tbody>

@@ -13,17 +13,32 @@ use Illuminate\Http\Request;
 class ListingController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ * Display a listing of the resource.
+ *
+ * @return \Illuminate\Http\Response
+ */
     public function index()
-        {
+    {
         //
 
         $listings = Listing::all();
 
         return view('admin.listing.index', compact('listings'));
+
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function approval()
+    {
+        //
+
+        $listings = Listing::all();
+
+        return view('admin.listing.approval', compact('listings'));
 
     }
 
@@ -76,6 +91,8 @@ class ListingController extends Controller
         $model->description = $request->get('description');
         $model->owner_name = $request->get('owner_name');
         $model->contact_number = $request->get('contact_number');
+
+        $model->status = $request->get('status');
 
         $model->save();
 
@@ -168,6 +185,8 @@ class ListingController extends Controller
         $listing->description = $request->get('description');
         $listing->owner_name = $request->get('owner_name');
         $listing->contact_number = $request->get('contact_number');
+
+        $listing->status = $request->get('status');
 
         $listing->save();
 

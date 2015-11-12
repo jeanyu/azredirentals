@@ -7,7 +7,7 @@
         <div id="renter" class="tab-pane">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Edit Listing</h1>
+                    <h1 class="page-header">Add Region</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -22,18 +22,9 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                    {!! Form::model($listing,['route'=>["admin.listing.update",$listing->id], 'files' => true, 'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
-
-
-                                        <div class="form-group">
-
-                                            {!! Form::label('status', 'Status:') !!}
-                                            {!! Form::select('status', array('Active' => 'Active', 'Inactive' => 'Inactive'), null, array('class' => 'form-control')) !!}
-                                        </div>
-
-
-                                        @include('admin.listing.form')
-
+                                    {!! Form::open(['url'=>route('admin.region.store'),'method'=>'POST']) !!}
+                                    {!! Form::hidden('status', 'Active') !!}
+                                    @include('admin.region.form')
 
                                     {!! Form::close() !!}
 

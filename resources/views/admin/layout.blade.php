@@ -338,7 +338,10 @@
                                 <a href="#"><i class="fa fa-table fa-fw"></i> Manage Listings<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="/listing">All Listings</a>
+                                        <a href="/listing">Approved Listings</a>
+                                    </li>
+                                    <li>
+                                        <a href="/listing/for-approval">For Approval Listings</a>
                                     </li>
                                     <li>
                                         <a href="/add-listing">Add Listing</a>
@@ -346,6 +349,61 @@
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
+
+                            <li>
+                                <a href="#"><i class="fa fa-table fa-fw"></i> Manage Areas<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">Manage City <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="/city">All Cities</a>
+                                            </li>
+                                            <li>
+                                                <a href="/add-city">Add City</a>
+                                            </li>
+                                        </ul>
+                                        <!-- /.nav-third-level -->
+                                    </li>
+                                    <li>
+                                        <a href="#">Manage State <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="/state">All States</a>
+                                            </li>
+                                            <li>
+                                                <a href="/add-state">Add State</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Manage Region <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="/region">All Regions</a>
+                                            </li>
+                                            <li>
+                                                <a href="/add-region">Add Region</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Manage Country <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="/country">All Countries</a>
+                                            </li>
+                                            <li>
+                                                <a href="/add-country">Add Country</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+
+
 
 
 

@@ -23,7 +23,7 @@
                                 <div class="col-lg-12">
 
                                     {!! Form::open(['url'=>route('admin.listing.store'),'method'=>'POST', 'files' => true]) !!}
-
+                                    {!! Form::hidden('status', 'Inactive') !!}
                                     @include('admin.listing.form')
 
                                     {!! Form::close() !!}

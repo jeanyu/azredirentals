@@ -45,8 +45,33 @@ Route::get('renter/delete/{id}',['as'=>'admin.renter.delete','uses'=>'Admin\Rent
 
 /* Listing */
 Route::get('listing',['as'=>'admin.listing.index','uses'=>'Admin\ListingController@index']);
+Route::get('listing/for-approval',['as'=>'admin.listing.approval','uses'=>'Admin\ListingController@approval']);
 Route::get('add-listing',['as'=>'admin.listing.create','uses'=>'Admin\ListingController@create']);
 Route::post('listing',['as'=>'admin.listing.store','uses'=>'Admin\ListingController@store']);
 Route::put('listing/{id}',['as'=>'admin.listing.update','uses'=>'Admin\ListingController@update']);
 Route::get('listing/edit/{id}',['as'=>'admin.listing.edit','uses'=>'Admin\ListingController@edit']);
 Route::get('listing/delete/{id}',['as'=>'admin.listing.delete','uses'=>'Admin\ListingController@destroy']);
+
+/* City */
+Route::get('city',['as'=>'admin.city.index','uses'=>'Admin\CityController@index']);
+Route::get('add-city',['as'=>'admin.city.create','uses'=>'Admin\CityController@create']);
+Route::post('city',['as'=>'admin.city.store','uses'=>'Admin\CityController@store']);
+Route::put('city/{id}',['as'=>'admin.city.update','uses'=>'Admin\CityController@update']);
+Route::get('city/edit/{id}',['as'=>'admin.city.edit','uses'=>'Admin\CityController@edit']);
+Route::get('city/delete/{id}',['as'=>'admin.city.delete','uses'=>'Admin\CityController@destroy']);
+
+/* State */
+Route::get('state',['as'=>'admin.state.index','uses'=>'Admin\StateController@index']);
+Route::get('add-state',['as'=>'admin.state.create','uses'=>'Admin\StateController@create']);
+Route::post('state',['as'=>'admin.state.store','uses'=>'Admin\StateController@store']);
+Route::put('state/{id}',['as'=>'admin.state.update','uses'=>'Admin\StateController@update']);
+Route::get('state/edit/{id}',['as'=>'admin.state.edit','uses'=>'Admin\StateController@edit']);
+Route::get('state/delete/{id}',['as'=>'admin.state.delete','uses'=>'Admin\StateController@destroy']);
+
+/* Region */
+Route::get('region',['as'=>'admin.region.index','uses'=>'Admin\RegionController@index']);
+Route::get('add-region',['as'=>'admin.region.create','uses'=>'Admin\RegionController@create']);
+Route::post('region',['as'=>'admin.region.store','uses'=>'Admin\RegionController@store']);
+Route::put('region/{id}',['as'=>'admin.region.update','uses'=>'Admin\RegionController@update']);
+Route::get('region/edit/{id}',['as'=>'admin.region.edit','uses'=>'Admin\RegionController@edit']);
+Route::get('region/delete/{id}',['as'=>'admin.region.delete','uses'=>'Admin\RegionController@destroy']);

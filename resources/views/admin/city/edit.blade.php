@@ -7,7 +7,7 @@
         <div id="renter" class="tab-pane">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Edit Listing</h1>
+                    <h1 class="page-header">Edit City</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -22,17 +22,16 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                    {!! Form::model($listing,['route'=>["admin.listing.update",$listing->id], 'files' => true, 'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
+                                     {!! Form::model($city,['route'=>["admin.city.update",$city->id],'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
 
 
-                                        <div class="form-group">
+                                    <div class="form-group">
 
-                                            {!! Form::label('status', 'Status:') !!}
-                                            {!! Form::select('status', array('Active' => 'Active', 'Inactive' => 'Inactive'), null, array('class' => 'form-control')) !!}
-                                        </div>
+                                        {!! Form::label('status', 'Status:') !!}
+                                        {!! Form::select('status', array('Active' => 'Active', 'Inactive' => 'Inactive'), null, array('class' => 'form-control')) !!}
+                                    </div>
 
-
-                                        @include('admin.listing.form')
+                                     @include('admin.city.form')
 
 
                                     {!! Form::close() !!}

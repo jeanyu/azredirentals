@@ -36,6 +36,7 @@ class CreateListingsTable extends Migration
             $table->string('owner_name');
             $table->string('contact_number');
             $table->string('file');
+            $table->string('status');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -51,5 +52,3 @@ class CreateListingsTable extends Migration
         Schema::drop('listings');
     }
 }
-
-
