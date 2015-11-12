@@ -7,7 +7,7 @@
         <div id="renter" class="tab-pane">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Add City</h1>
+                    <h1 class="page-header">Add Country</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -22,9 +22,9 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                    {!! Form::open(['url'=>route('admin.city.store'),'method'=>'POST']) !!}
+                                    {!! Form::open(['url'=>route('admin.country.store'),'method'=>'POST']) !!}
                                     {!! Form::hidden('status', 'Active') !!}
-                                    @include('admin.city.form')
+                                    @include('admin.country.form')
 
                                     {!! Form::close() !!}
 

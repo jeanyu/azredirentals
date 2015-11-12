@@ -5,7 +5,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Cities</h1>
+                <h1 class="page-header">Countries</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -23,22 +23,22 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>City Name</th>
+                                    <th>Country Name</th>
                                     <th>Status</th>
                                     <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
 
-                                @foreach ($cities as $city)
+                                @foreach ($countries as $country)
 
                                     <tr class="odd gradeX">
 
-                                        <td><a href="{{route('admin.city.edit',$city->id)}}">{{ $city->id }}</a></td>
+                                        <td><a href="{{route('admin.country.edit',$country->id)}}">{{ $country->id }}</a></td>
 
-                                        <td>{{ $city->name }}</td>
-                                        <td>{{ $city->status }}</td>
-                                        <td><a href="{{route('admin.city.delete',$city->id)}}">DELETE</a></td>
+                                        <td>{{ $country->name }}</td>
+                                        <td>{{ $country->status }}</td>
+                                        <td><a href="{{route('admin.country.delete',$country->id)}}">DELETE</a></td>
                                     </tr>
 
                                 @endforeach

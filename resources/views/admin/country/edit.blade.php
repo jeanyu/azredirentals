@@ -7,7 +7,7 @@
         <div id="renter" class="tab-pane">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Edit City</h1>
+                    <h1 class="page-header">Edit Country</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -22,7 +22,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
 
-                                     {!! Form::model($city,['route'=>["admin.city.update",$city->id],'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
+                                     {!! Form::model($country,['route'=>["admin.country.update",$country->id],'method'=>"PUT",'enctype'=>'multipart/form-data']) !!}
 
 
                                     <div class="form-group">
@@ -31,7 +31,7 @@
                                         {!! Form::select('status', array('Active' => 'Active', 'Inactive' => 'Inactive'), null, array('class' => 'form-control')) !!}
                                     </div>
 
-                                     @include('admin.city.form')
+                                     @include('admin.country.form')
 
 
                                     {!! Form::close() !!}

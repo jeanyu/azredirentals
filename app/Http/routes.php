@@ -75,3 +75,11 @@ Route::post('region',['as'=>'admin.region.store','uses'=>'Admin\RegionController
 Route::put('region/{id}',['as'=>'admin.region.update','uses'=>'Admin\RegionController@update']);
 Route::get('region/edit/{id}',['as'=>'admin.region.edit','uses'=>'Admin\RegionController@edit']);
 Route::get('region/delete/{id}',['as'=>'admin.region.delete','uses'=>'Admin\RegionController@destroy']);
+
+/* Country */
+Route::get('country',['as'=>'admin.country.index','uses'=>'Admin\CountryController@index']);
+Route::get('add-country',['as'=>'admin.country.create','uses'=>'Admin\CountryController@create']);
+Route::post('country',['as'=>'admin.country.store','uses'=>'Admin\CountryController@store']);
+Route::put('country/{id}',['as'=>'admin.country.update','uses'=>'Admin\CountryController@update']);
+Route::get('country/edit/{id}',['as'=>'admin.country.edit','uses'=>'Admin\CountryController@edit']);
+Route::get('country/delete/{id}',['as'=>'admin.country.delete','uses'=>'Admin\CountryController@destroy']);

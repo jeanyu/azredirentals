@@ -1,7 +1,7 @@
 {!! Form::hidden('user_id', 1) !!}
 <div class="form-group">
 
-    {!! Form::label('name', 'City Name:') !!}
+    {!! Form::label('name', 'Country Name:') !!}
     {!! Form::text('name', null, ['class'=>'form-control']) !!} <!-- name, default, additional params -->
 </div>
 

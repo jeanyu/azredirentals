@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use App\Country;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CountryRequest;
+use Illuminate\Http\Request;
 
 class CountryController extends Controller
 {
@@ -15,7 +17,9 @@ class CountryController extends Controller
      */
     public function index()
     {
-        //
+        $countries = Country::all();
+
+        return view('admin.country.index', compact('countries'));
     }
 
     /**
@@ -25,7 +29,7 @@ class CountryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.country.create');
     }
 
     /**
@@ -34,9 +38,16 @@ class CountryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CountryRequest $request)
     {
-        //
+        /** save data from Country form to database **/
+        $model = new Country();
+
+        $model->name = $request->get('name');
+        $model->status = $request->get('status');
+
+        $model->save();
+        return redirect('country');
     }
 
     /**
@@ -47,7 +58,8 @@ class CountryController extends Controller
      */
     public function show($id)
     {
-        //
+        $country = Country::findOrFail($id);
+        return view('admin.page.show', compact('country'));
     }
 
     /**
@@ -58,7 +70,8 @@ class CountryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $country  = Country::findOrFail($id);
+        return view('admin.country.edit',compact('country'));
     }
 
     /**
@@ -68,9 +81,15 @@ class CountryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CountryRequest $request, $id)
     {
-        //
+        $country = Country::findOrFail($id);
+        $country->name = $request->get('name');
+        $country->status = $request->get('status');
+
+        $country->save();
+
+        return redirect('country');
     }
 
     /**
@@ -81,6 +100,8 @@ class CountryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $country = Country::findOrFail($id);
+        $country->delete();
+        return redirect('country');
     }
 }
