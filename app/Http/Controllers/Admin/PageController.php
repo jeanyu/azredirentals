@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
+use App\User;
+use App\Listing;
 use App\Http\Requests;
+
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class PageController extends Controller
 {
@@ -15,8 +19,13 @@ class PageController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.page.index');
+       /* $users = User::all();
+        $listings = Listing::all();*/
+
+        $users = User::orderBy('created_at', 'desc')->limit(10)->get();
+        $listings = Listing::orderBy('created_at', 'desc')->limit(10)->get();
+
+        return view('admin.page.index', compact('users', 'listings'));
     }
 
     /**
